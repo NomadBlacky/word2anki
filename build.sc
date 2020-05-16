@@ -26,6 +26,11 @@ object core extends ScalaModule with ScalafmtModule {
       "--initialize-at-build-time=scala.runtime.Statics$VM"
     ).call(stdout = os.Inherit, stderr = os.Inherit)
   }
+
+  object test extends Tests {
+    override def ivyDeps = Agg(ivy"org.scalameta::munit:0.7.7")
+    def testFrameworks = Seq("munit.Framework")
+  }
 }
 
 def idea(ev: Evaluator) = scalalib.GenIdea.idea(ev)
