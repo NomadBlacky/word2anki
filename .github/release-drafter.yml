@@ -1,0 +1,19 @@
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+
+categories:
+  - title: 'New Features'
+    label: 'enhancement'
+
+  - title: 'Bug Fixes'
+    label: 'bug'
+
+  - title: 'Documentation Updates'
+    label: 'documentation'
+
+  - title: 'Dependency Updates'
+    label: 'dependency update'
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+template: |
+  $CHANGES
