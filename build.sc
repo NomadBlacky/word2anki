@@ -6,7 +6,9 @@ import mill.scalalib.scalafmt.ScalafmtModule
 object core extends ScalaModule with ScalafmtModule {
   def scalaVersion = "2.13.1"
   override def ivyDeps = Agg(
-    ivy"net.ruippeixotog::scala-scraper:2.2.0"
+    ivy"net.ruippeixotog::scala-scraper:2.2.0",
+    ivy"com.softwaremill.sttp.client::core:2.1.1",
+    ivy"com.softwaremill.sttp.client::circe:2.1.1"
   )
   def nativeImage = T {
     assembly()
